@@ -29,7 +29,7 @@ describe Wordnik::Client do
    end
 
    it "should be able to get the word of the day" do
-    VCR.use_cassette('word_of_the_deay') do
+    VCR.use_cassette('word_of_the_day') do
       expect(client.word_of_the_day[:word]).to be_a String
     end
  end
