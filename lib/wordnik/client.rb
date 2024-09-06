@@ -4,34 +4,8 @@ module Wordnik
   class Client
     attr_accessor :configuration
 
-    def initialize()
-      @configuration = Configuration.new
-    end
-
-    def call(url, params)
-      Faraday.new(url: url) do |conn|
-        conn.request :url_encoded
-        conn.adapter Faraday.default_adapter
-        conn.response :json
-        conn.request :json
-      end.get(url, params)
-    end
-
-    def compose_url(path)
-      "#{configuration.api_url}/#{configuration.api_version}/#{path}"
-    end
-
-    def normalize_params(params)
-      params = Wordnik.to_camel_case(params)
-      params[:api_key] = @configuration.api_key
-      params
-    end
-
-    def call_with_path(path, params)
-      url = compose_url(path)
-      params = normalize_params(params)
-      b = call(url, params).body
-      Wordnik.to_snake_case(b)
+    def initialize(configuration = nil)
+      @configuration = configuration || Configuration.new
     end
 
     def audio(word, params = {})
@@ -41,6 +15,8 @@ module Wordnik
     def definitions(word, params = {})
       call_with_path("word.json/#{word}/definitions", params)
     end
+
+    alias_method :def, :definitions
 
     def etymologies(word, params = {})
       call_with_path("word.json/#{word}/etymologies", params)
@@ -128,6 +104,33 @@ module Wordnik
 
     def equivalents(word, params = {})
       related_words(word, relationship_types: :equivalent).map { |r| r[:words] }.flatten
+    end
+
+    private
+
+    def call(url, params)
+      params[:api_key] = @configuration.api_key
+      Faraday.new(url: url) do |conn|
+        conn.request :url_encoded
+        conn.adapter Faraday.default_adapter
+        conn.response :json
+        conn.request :json
+      end.get(url, params)
+    end
+
+    def compose_url(path)
+      "#{configuration.api_url}/#{configuration.api_version}/#{path}"
+    end
+
+    def normalize_params(params)
+      Wordnik.to_camel_case(params)
+    end
+
+    def call_with_path(path, params)
+      url = compose_url(path)
+      params = normalize_params(params)
+      b = call(url, params).body
+      Wordnik.to_snake_case(b)
     end
 
   end
