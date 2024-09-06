@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wordnik.com/v4/word.json/ruby/etymologies?api_key=API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.11.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 06 Sep 2024 19:54:26 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - nginx/1.24.0
+      x-ratelimit-remaining-hour:
+      - '14975'
+      x-ratelimit-limit-hour:
+      - '15000'
+      ratelimit-reset:
+      - '34'
+      ratelimit-remaining:
+      - '498'
+      ratelimit-limit:
+      - '500'
+      x-ratelimit-limit-minute:
+      - '500'
+      x-ratelimit-remaining-minute:
+      - '498'
+      cache-control:
+      - no-cache
+      access-control-allow-origin:
+      - "*"
+      x-kong-upstream-latency:
+      - '10'
+      x-kong-proxy-latency:
+      - '0'
+      via:
+      - kong/3.4.1
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '["<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ety>[F. <ets>rubis</ets>
+        (cf. Pr. <ets>robi</ets>), LL. <ets>rubinus</ets>, <ets>robinus</ets>, fr.
+        L. <ets>rubeus</ets> red, reddish, akin to <ets>ruber</ets>. See <er>Rouge</er>,
+        <er>red</er>.]</ety>\n"]'
+  recorded_at: Fri, 06 Sep 2024 19:54:26 GMT
+recorded_with: VCR 6.3.1

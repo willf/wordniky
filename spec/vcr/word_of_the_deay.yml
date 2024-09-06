@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=API_KEY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.11.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 06 Sep 2024 19:48:59 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - nginx/1.24.0
+      x-ratelimit-remaining-minute:
+      - '498'
+      x-ratelimit-limit-minute:
+      - '500'
+      x-ratelimit-limit-hour:
+      - '15000'
+      ratelimit-reset:
+      - '1'
+      ratelimit-remaining:
+      - '498'
+      ratelimit-limit:
+      - '500'
+      x-ratelimit-remaining-hour:
+      - '14988'
+      cache-control:
+      - no-cache
+      access-control-allow-origin:
+      - "*"
+      x-kong-upstream-latency:
+      - '4'
+      x-kong-proxy-latency:
+      - '1'
+      via:
+      - kong/3.4.1
+      content-encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"_id":"66d34cd910816e928365f9dc","word":"epeiric","publishDate":"2024-09-06T03:00:00.000Z","contentProvider":{"name":"wordnik","id":711},"note":"The
+        word ''epeiric'' comes from a Greek word meaning ''continent''.","htmlExtra":null,"pdd":"2024-09-06","definitions":[{"text":"Describing
+        the part of a sea that lies over a continental shelf.","partOfSpeech":"adjective","source":"wiktionary","note":null}],"examples":[{"url":"http://fictionaut.com/stories/joe-sullivan/new-race","text":"By
+        later today, we''ll have turned west, will pass by Lake Manyara, epeiric Lake
+        Eyasi, will be out on the fabled Serengeti.","title":"New Race","id":1082054546},{"url":"http://paleochick.blogspot.com/2008_03_01_archive.html","text":"Abstract:
+        Repeated sequences of carbonate and shale are punctuated by condensed sections
+        of phosphatic conglomerate in the epeiric deposits of the Trans-Saharan Seaway
+        in northeastern Mali.","title":"Archive 2008-03-01","id":473757870}]}'
+  recorded_at: Fri, 06 Sep 2024 19:48:59 GMT
+recorded_with: VCR 6.3.1
