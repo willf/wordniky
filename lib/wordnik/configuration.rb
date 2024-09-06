@@ -14,7 +14,7 @@ module Wordnik
       @api_url = loaded['api_url'] || defaults[:api_url]
       @api_version = loaded['api_version'] || defaults[:api_version]
       if @api_key.nil?
-        raise 'No API key found. Please set it in the environment variable WORDNIK_API_KEY or in a .Wordnik.yml file'
+        raise 'No API key found. Please set it in the environment variable WORDNIK_API_KEY or in a .wordnik.yml file'
       end
       self
     end
