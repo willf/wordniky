@@ -18,9 +18,13 @@ module Wordnik
 
     alias_method :def, :definitions
 
-    def etymologies(word, params = {})
-      call_with_path("word.json/#{word}/etymologies", params)
-    end
+    # Unfortunately, this endpoint returns unexpected results
+    # it throws an error if the word doesn't exist, and
+    # returns one etymology, without any other information
+    # in XML format.
+    # def etymologies(word, params = {})
+    #   call_with_path("word.json/#{word}/etymologies", params)
+    # end
 
     def examples(word, params = {})
       call_with_path("word.json/#{word}/examples", params)

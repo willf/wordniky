@@ -100,11 +100,12 @@ describe Wordnik::Client do
       end
     end
 
-    it "should be able to get etymologies" do
-      VCR.use_cassette('etymologies') do
-        expect(client.etymologies('ruby')).to be_an Array
-      end
-    end
+    # The etymologies endpoint has been removed from this version of the API
+    # it "should be able to get etymologies" do
+    #   VCR.use_cassette('etymologies') do
+    #     expect(client.etymologies('ruby')).to be_an Array
+    #   end
+    # end
 
     it "should be able to get random words" do
       VCR.use_cassette('random_words') do
