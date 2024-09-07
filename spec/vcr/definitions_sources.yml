@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wordnik.com/v4/word.json/ruby/definitions?api_key=API_KEY&sourceDictionaries=wiktionary
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.11.0
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sat, 07 Sep 2024 03:58:17 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - keep-alive
+      server:
+      - nginx/1.24.0
+      x-ratelimit-remaining-minute:
+      - '499'
+      x-ratelimit-limit-minute:
+      - '500'
+      x-ratelimit-limit-hour:
+      - '15000'
+      ratelimit-reset:
+      - '43'
+      ratelimit-remaining:
+      - '499'
+      ratelimit-limit:
+      - '500'
+      x-ratelimit-remaining-hour:
+      - '14989'
+      cache-control:
+      - no-cache
+      vary:
+      - accept-encoding
+      content-encoding:
+      - gzip
+      access-control-allow-origin:
+      - "*"
+      x-kong-upstream-latency:
+      - '5'
+      x-kong-proxy-latency:
+      - '0'
+      via:
+      - kong/3.4.1
+    body:
+      encoding: UTF-8
+      string: '[{"partOfSpeech":"noun","attributionText":"from Wiktionary, Creative
+        Commons Attribution/Share-Alike License.","sourceDictionary":"wiktionary","text":"A
+        clear, deep, <xref>red</xref> variety of <xref>corundum</xref>, valued as
+        a precious stone.","word":"ruby","attributionUrl":"http://creativecommons.org/licenses/by-sa/3.0/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]},{"partOfSpeech":"noun","attributionText":"from
+        Wiktionary, Creative Commons Attribution/Share-Alike License.","sourceDictionary":"wiktionary","text":"A
+        deep <xref>red</xref> <xref>colour</xref>.","word":"ruby","attributionUrl":"http://creativecommons.org/licenses/by-sa/3.0/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]},{"partOfSpeech":"noun","attributionText":"from
+        Wiktionary, Creative Commons Attribution/Share-Alike License.","sourceDictionary":"wiktionary","text":"Type
+        having a height of 5.5 <xref>points</xref>.","labels":[{"text":"typography","type":"field"},{"text":"UK","type":"region"}],"word":"ruby","attributionUrl":"http://creativecommons.org/licenses/by-sa/3.0/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"notes":[],"relatedWords":[],"textProns":[]},{"partOfSpeech":"noun","attributionText":"from
+        Wiktionary, Creative Commons Attribution/Share-Alike License.","sourceDictionary":"wiktionary","text":"A
+        ruby hummer, a South American <xref>hummingbird</xref>, Clytolaema rubricauda.","word":"ruby","attributionUrl":"http://creativecommons.org/licenses/by-sa/3.0/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]},{"partOfSpeech":"noun","attributionText":"from
+        Wiktionary, Creative Commons Attribution/Share-Alike License.","sourceDictionary":"wiktionary","text":"A
+        red bird-of-paradise, Paradisaea rubra.","word":"ruby","attributionUrl":"http://creativecommons.org/licenses/by-sa/3.0/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]},{"partOfSpeech":"adjective","attributionText":"from
+        Wiktionary, Creative Commons Attribution/Share-Alike License.","sourceDictionary":"wiktionary","text":"Of
+        a deep <xref>red</xref> colour (having any of numerous bright colours reminiscent
+        of the colour of blood or cherries or tomatoes).","word":"ruby","attributionUrl":"http://creativecommons.org/licenses/by-sa/3.0/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]},{"partOfSpeech":"verb","attributionText":"from
+        Wiktionary, Creative Commons Attribution/Share-Alike License.","sourceDictionary":"wiktionary","text":"To
+        make <xref>red</xref>; to <xref>redden</xref>.","labels":[{"text":"transitive","type":"grammar"},{"text":"poetic","type":"usage"}],"word":"ruby","attributionUrl":"http://creativecommons.org/licenses/by-sa/3.0/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"notes":[],"relatedWords":[],"textProns":[]},{"partOfSpeech":"noun","attributionText":"from
+        Wiktionary, Creative Commons Attribution/Share-Alike License.","sourceDictionary":"wiktionary","text":"A
+        pronunciation guide written above or beside Chinese or Japanese characters.","word":"ruby","attributionUrl":"http://creativecommons.org/licenses/by-sa/3.0/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]}]'
+  recorded_at: Sat, 07 Sep 2024 03:58:17 GMT
+recorded_with: VCR 6.3.1

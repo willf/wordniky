@@ -47,6 +47,21 @@ describe Wordnik::Client do
     end
   end
 
+  it "should be able to limit definitions to specific sources" do
+    VCR.use_cassette('definitions_sources') do
+      defs = client.definitions('ruby', source_dictionaries: 'wiktionary')
+      sources = defs.map { |d| d[:source_dictionary] }.uniq
+      expect(sources).to eq ['wiktionary']
+    end
+  end
+
+  it "should be able to limit the number of definitions returned" do
+    VCR.use_cassette('definitions_limit') do
+      defs = client.definitions('set', limit: 3)
+      expect(defs.size).to eq 3
+    end
+  end
+
 
   it "should be able to get examples" do
     VCR.use_cassette('examples') do
