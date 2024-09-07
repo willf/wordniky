@@ -39,6 +39,15 @@ describe Wordnik::Client do
     end
   end
 
+  it "should be able to limit definitions to specific parts of speech" do
+    VCR.use_cassette('definitions_noun') do
+      defs = client.definitions('fish', part_of_speech: 'noun')
+      parts_of_speech = defs.map { |d| d[:part_of_speech] }.uniq
+      expect(parts_of_speech).to eq ['noun']
+    end
+  end
+
+
   it "should be able to get examples" do
     VCR.use_cassette('examples') do
       expect(client.examples('ruby')).to be_a Hash
