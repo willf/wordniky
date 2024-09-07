@@ -136,6 +136,5 @@ module Wordnik
       b = call(url, params).body
       Wordnik.to_snake_case(b)
     end
-
   end
 end

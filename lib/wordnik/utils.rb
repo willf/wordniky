@@ -11,6 +11,7 @@ module Wordnik
       elsif thing.match(/^\d{4}-\d{2}-\d{2}$/)
         return Date.parse(thing)
       end
+
       return thing
     end
     return thing
@@ -20,6 +21,7 @@ module Wordnik
     if str.size == 0
       return str
     end
+
     str[0].upcase + str[1..-1]
   end
 
@@ -27,16 +29,17 @@ module Wordnik
     if str.size == 0
       return str
     end
+
     str[0].downcase + str[1..-1]
   end
 
   def to_underscore(str)
     str = str.to_s
     str.gsub(/::/, '/')
-        .gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2')
-        .gsub(/([a-z\d])([A-Z])/, '\1_\2')
-        .tr("-", "_")
-        .downcase
+       .gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2')
+       .gsub(/([a-z\d])([A-Z])/, '\1_\2')
+       .tr("-", "_")
+       .downcase
   end
 
   def to_camel(str)
@@ -44,7 +47,8 @@ module Wordnik
     if str.size == 0
       return str
     end
-    s = str.split('_').map{|part| capitalize_simple(part)}.join
+
+    s = str.split('_').map { |part| capitalize_simple(part) }.join
     lowercase_simple(s)
   end
 
@@ -56,6 +60,7 @@ module Wordnik
     elsif !thing.is_a?(Hash)
       return thing
     end
+
     # else it's a hash
     result = {}
     thing.each do |key, value|
@@ -76,6 +81,7 @@ module Wordnik
     elsif !thing.is_a?(Hash)
       return thing
     end
+
     # else it's a hash
     result = {}
     thing.each do |key, value|
@@ -88,5 +94,4 @@ module Wordnik
     end
     result
   end
-
 end

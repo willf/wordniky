@@ -2,7 +2,6 @@ module Wordnik
   VERSION = "0.0.1"
 end
 
-
 Gem::Specification.new do |s|
   s.name        = "Wordnik"
   s.version     = Wordnik::VERSION
@@ -15,14 +14,13 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "Wordnik"
 
-  s.add_dependency 'json'
   s.add_dependency 'faraday'
 
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'pry'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'vcr'
-
+  s.add_development_dependency 'rubocop'
 
   s.files         = Dir.glob("lib/**/*")
   s.require_paths = ["lib"]

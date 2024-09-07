@@ -16,6 +16,7 @@ module Wordnik
       if @api_key.nil?
         raise 'No API key found. Please set it in the environment variable WORDNIK_API_KEY or in a .wordnik.yml file'
       end
+
       self
     end
 
@@ -36,6 +37,5 @@ module Wordnik
     def inspect
       to_s
     end
-
   end
 end
