@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake'
   s.add_development_dependency 'vcr'
   s.add_development_dependency 'rubocop'
+  s.add_development_dependency 'yard'
 
   s.files         = Dir.glob("lib/**/*")
   s.require_paths = ["lib"]

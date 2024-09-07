@@ -63,6 +63,7 @@ GEM
     uri (0.13.1)
     vcr (6.3.1)
       base64
+    yard (0.9.37)
 
 PLATFORMS
   x86_64-darwin-19
@@ -74,6 +75,7 @@ DEPENDENCIES
   rspec
   rubocop
   vcr
+  yard
 
 BUNDLED WITH
    2.2.29
