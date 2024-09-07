@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.wordnik.com/v4/word.json/ruby/examples?api_key=API_KEY
+    uri: https://api.wordnik.com/v4/word.json/ruby/examples?api_key=API_KEY&limit=10
     body:
       encoding: US-ASCII
       string: ''
@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Fri, 06 Sep 2024 19:51:51 GMT
+      - Sat, 07 Sep 2024 23:40:14 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -25,19 +25,19 @@ http_interactions:
       server:
       - nginx/1.24.0
       x-ratelimit-remaining-hour:
-      - '14979'
+      - '14954'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '9'
+      - '46'
       ratelimit-remaining:
-      - '499'
+      - '496'
       ratelimit-limit:
       - '500'
       x-ratelimit-limit-minute:
       - '500'
       x-ratelimit-remaining-minute:
-      - '499'
+      - '496'
       cache-control:
       - no-cache
       vary:
@@ -92,5 +92,5 @@ http_interactions:
         Radavsky will be the featured performer, singing songs with the word ruby
         in them.","documentId":12877251,"exampleId":195307394,"title":"The Daily Sentinel:
         News"}]}'
-  recorded_at: Fri, 06 Sep 2024 19:51:51 GMT
+  recorded_at: Sat, 07 Sep 2024 23:40:14 GMT
 recorded_with: VCR 6.3.1

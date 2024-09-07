@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.wordnik.com/v4/words.json/randomWords?api_key=API_KEY
+    uri: https://api.wordnik.com/v4/words.json/randomWords?api_key=API_KEY&hasDictionaryDef=true&limit=10
     body:
       encoding: US-ASCII
       string: ''
@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Fri, 06 Sep 2024 19:54:36 GMT
+      - Sat, 07 Sep 2024 23:40:19 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -24,44 +24,36 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-hour:
-      - '14974'
+      x-ratelimit-remaining-minute:
+      - '489'
+      x-ratelimit-limit-minute:
+      - '500'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '24'
+      - '43'
       ratelimit-remaining:
-      - '497'
+      - '489'
       ratelimit-limit:
       - '500'
-      x-ratelimit-limit-minute:
-      - '500'
-      x-ratelimit-remaining-minute:
-      - '497'
+      x-ratelimit-remaining-hour:
+      - '14958'
       cache-control:
       - no-cache
-      vary:
-      - accept-encoding
-      content-encoding:
-      - gzip
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '140'
+      - '1362'
       x-kong-proxy-latency:
-      - '0'
+      - '1'
       via:
       - kong/3.4.1
+      content-encoding:
+      - gzip
     body:
       encoding: UTF-8
-      string: '[{"word":"stalking horse","id":0},{"word":"uromelus","id":0},{"word":"fermeture","id":0},{"word":"vibriosis","id":0},{"word":"hangoverish","id":0},{"word":"hebdomadal","id":0},{"word":"tangoes","id":0},{"word":"bepowders","id":0},{"word":"imputative","id":0},{"word":"poa
-        pratensis","id":0},{"word":"filtrable","id":0},{"word":"aminoethanols","id":0},{"word":"decision
-        maker","id":0},{"word":"catherine wheel","id":0},{"word":"canada","id":0},{"word":"gempyloid","id":0},{"word":"gasteropod","id":0},{"word":"holothuriidæ","id":0},{"word":"rest
-        home","id":0},{"word":"cysteinyl","id":0},{"word":"cartisane","id":0},{"word":"pargetory","id":0},{"word":"genus
-        taxus","id":0},{"word":"fluoboric","id":0},{"word":"myrtaceæ","id":0},{"word":"wingback","id":0},{"word":"egg-white","id":0},{"word":"abductees","id":0},{"word":"sex
-        object","id":0},{"word":"ædiles","id":0},{"word":"eicosacolic","id":0},{"word":"noght","id":0},{"word":"Resen","id":0},{"word":"knee-punch","id":0},{"word":"garter
-        snake","id":0},{"word":"venews","id":0},{"word":"extractive","id":0},{"word":"coupler","id":0},{"word":"goat''s
-        rue","id":0},{"word":"clinocephalism","id":0},{"word":"mimsey","id":0},{"word":"reattaining","id":0},{"word":"tip-car","id":0},{"word":"topiaries","id":0},{"word":"enteradenology","id":0},{"word":"uncommunicable","id":0},{"word":"Jordan
-        curve","id":0},{"word":"Tanoan","id":0},{"word":"hotter","id":0},{"word":"joanna-pacitti","id":0}]'
-  recorded_at: Fri, 06 Sep 2024 19:54:36 GMT
+      string: '[{"word":"traffic cones","id":0},{"word":"banishes","id":0},{"word":"quartersawing","id":0},{"word":"belt
+        up","id":0},{"word":"reconceptualize","id":0},{"word":"bibliomaniac","id":0},{"word":"strekelia","id":0},{"word":"indigo-bird","id":0},{"word":"fanny
+        fart","id":0},{"word":"shortcuts","id":0}]'
+  recorded_at: Sat, 07 Sep 2024 23:40:19 GMT
 recorded_with: VCR 6.3.1

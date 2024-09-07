@@ -15,7 +15,7 @@ http_interactions:
       message: Not Found
     headers:
       date:
-      - Fri, 06 Sep 2024 19:53:33 GMT
+      - Sat, 07 Sep 2024 23:40:16 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -25,27 +25,27 @@ http_interactions:
       server:
       - nginx/1.24.0
       x-ratelimit-remaining-minute:
-      - '498'
+      - '494'
       x-ratelimit-limit-minute:
       - '500'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '27'
+      - '44'
       ratelimit-remaining:
-      - '498'
+      - '494'
       ratelimit-limit:
       - '500'
       x-ratelimit-remaining-hour:
-      - '14986'
+      - '14963'
       cache-control:
       - no-cache
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '8'
+      - '11'
       x-kong-proxy-latency:
-      - '1'
+      - '0'
       via:
       - kong/3.4.1
       content-encoding:
@@ -53,5 +53,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"statusCode":404,"error":"Not Found","message":"Not found"}'
-  recorded_at: Fri, 06 Sep 2024 19:53:33 GMT
+  recorded_at: Sat, 07 Sep 2024 23:40:16 GMT
 recorded_with: VCR 6.3.1

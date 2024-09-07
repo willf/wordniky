@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.wordnik.com/v4/word.json/ruby/pronunciations?api_key=API_KEY
+    uri: https://api.wordnik.com/v4/word.json/ruby/pronunciations?api_key=API_KEY&limit=50
     body:
       encoding: US-ASCII
       string: ''
@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Fri, 06 Sep 2024 19:53:59 GMT
+      - Sat, 07 Sep 2024 23:40:16 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -24,26 +24,26 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-hour:
-      - '14977'
+      x-ratelimit-remaining-minute:
+      - '492'
+      x-ratelimit-limit-minute:
+      - '500'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '1'
+      - '44'
       ratelimit-remaining:
-      - '499'
+      - '492'
       ratelimit-limit:
       - '500'
-      x-ratelimit-limit-minute:
-      - '500'
-      x-ratelimit-remaining-minute:
-      - '499'
+      x-ratelimit-remaining-hour:
+      - '14961'
       cache-control:
       - no-cache
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '9'
+      - '3'
       x-kong-proxy-latency:
       - '1'
       via:
@@ -54,5 +54,5 @@ http_interactions:
       encoding: UTF-8
       string: '[{"seq":0,"raw":"roo͞′bē","rawType":"ahd-5","id":"R5365500","attributionText":"from
         The American Heritage® Dictionary of the English Language, 5th Edition.","attributionUrl":"https://ahdictionary.com/"}]'
-  recorded_at: Fri, 06 Sep 2024 19:53:59 GMT
+  recorded_at: Sat, 07 Sep 2024 23:40:16 GMT
 recorded_with: VCR 6.3.1

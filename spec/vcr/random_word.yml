@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.wordnik.com/v4/words.json/randomWord?api_key=API_KEY
+    uri: https://api.wordnik.com/v4/words.json/randomWord?api_key=API_KEY&hasDictionaryDef=true
     body:
       encoding: US-ASCII
       string: ''
@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Fri, 06 Sep 2024 19:52:49 GMT
+      - Sat, 07 Sep 2024 23:40:15 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -24,26 +24,26 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-hour:
-      - '14978'
+      x-ratelimit-remaining-minute:
+      - '495'
+      x-ratelimit-limit-minute:
+      - '500'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '11'
+      - '45'
       ratelimit-remaining:
-      - '499'
+      - '495'
       ratelimit-limit:
       - '500'
-      x-ratelimit-limit-minute:
-      - '500'
-      x-ratelimit-remaining-minute:
-      - '499'
+      x-ratelimit-remaining-hour:
+      - '14964'
       cache-control:
       - no-cache
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '43'
+      - '38'
       x-kong-proxy-latency:
       - '0'
       via:
@@ -52,6 +52,6 @@ http_interactions:
       - gzip
     body:
       encoding: UTF-8
-      string: '{"word":"expander","id":0}'
-  recorded_at: Fri, 06 Sep 2024 19:52:49 GMT
+      string: '{"word":"nonexciting","id":0}'
+  recorded_at: Sat, 07 Sep 2024 23:40:15 GMT
 recorded_with: VCR 6.3.1

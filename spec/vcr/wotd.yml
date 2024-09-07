@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Fri, 06 Sep 2024 19:47:38 GMT
+      - Sat, 07 Sep 2024 23:40:12 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -24,41 +24,58 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-minute:
-      - '499'
-      x-ratelimit-limit-minute:
-      - '500'
+      x-ratelimit-remaining-hour:
+      - '14957'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '22'
+      - '48'
       ratelimit-remaining:
       - '499'
       ratelimit-limit:
       - '500'
-      x-ratelimit-remaining-hour:
-      - '14990'
+      x-ratelimit-limit-minute:
+      - '500'
+      x-ratelimit-remaining-minute:
+      - '499'
       cache-control:
       - no-cache
+      vary:
+      - accept-encoding
+      content-encoding:
+      - gzip
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '6'
+      - '5'
       x-kong-proxy-latency:
       - '0'
       via:
       - kong/3.4.1
-      content-encoding:
-      - gzip
     body:
       encoding: UTF-8
-      string: '{"_id":"66d34cd910816e928365f9dc","word":"epeiric","publishDate":"2024-09-06T03:00:00.000Z","contentProvider":{"name":"wordnik","id":711},"note":"The
-        word ''epeiric'' comes from a Greek word meaning ''continent''.","htmlExtra":null,"pdd":"2024-09-06","definitions":[{"text":"Describing
-        the part of a sea that lies over a continental shelf.","partOfSpeech":"adjective","source":"wiktionary","note":null}],"examples":[{"url":"http://fictionaut.com/stories/joe-sullivan/new-race","text":"By
-        later today, we''ll have turned west, will pass by Lake Manyara, epeiric Lake
-        Eyasi, will be out on the fabled Serengeti.","title":"New Race","id":1082054546},{"url":"http://paleochick.blogspot.com/2008_03_01_archive.html","text":"Abstract:
-        Repeated sequences of carbonate and shale are punctuated by condensed sections
-        of phosphatic conglomerate in the epeiric deposits of the Trans-Saharan Seaway
-        in northeastern Mali.","title":"Archive 2008-03-01","id":473757870}]}'
-  recorded_at: Fri, 06 Sep 2024 19:47:38 GMT
+      string: '{"_id":"66d34cd910816e928365f9f4","word":"palter","publishDate":"2024-09-07T03:00:00.000Z","contentProvider":{"name":"wordnik","id":711},"note":"The
+        word ''palter'' is probably from a German word meaning \"rag, trifle, worthless
+        thing\".","htmlExtra":null,"pdd":"2024-09-07","definitions":[{"text":"To haggle.","partOfSpeech":"verb","source":"gcide","note":null},{"text":"To
+        act in insincere or deceitful manner; to play false; to equivocate; to shift;
+        to dodge; to trifle.","partOfSpeech":"verb","source":"gcide","note":null},{"text":"To
+        babble; to chatter.","partOfSpeech":"verb","source":"gcide","note":null},{"text":"To
+        trifle with; to waste; to squander in paltry ways or on worthless things.","partOfSpeech":"verb","source":"gcide","note":null}],"examples":[{"url":"http://etext.library.adelaide.edu.au/s/scott/walter/talisman/complete.html","text":"“But,”
+        continued the baron anxiously, “what hope that this juggling slave of Saladin
+        will not palter with your Grace?”","title":"The Talisman","id":1090489205},{"url":"http://etext.library.adelaide.edu.au/s/scott/walter/nigel/complete.html","text":"“How,
+        or what do you mean?” said Nigel; “I will break your head, you drunken knave,
+        if you palter with me any longer.”","title":"The Fortunes of Nigel","id":1091224902},{"url":"http://etext.library.adelaide.edu.au/t/trollope/anthony/ayala/complete.html","text":"Do
+        not think that you should palter with the truth either because it may not
+        be palatable to me, or seem decorous to yourself.","title":"Ayala''s Angel","id":997972402},{"url":"http://books.simonandschuster.com/9780743241878","text":"He
+        smoked while the walker extolled his cloths, slipping his head between the
+        rails of ready-mades and his palter inside his patter.","title":"At Swim,
+        Two Boys","id":702392309},{"url":"http://www.gutenberg.org/dirs/etext04/8gata10.txt","text":"Armitage''s
+        time and means were being daily more and more absorbed by the propaganda,
+        to the detriment of his practice; but he was not of those who can palter with
+        their conscience.","title":"A Girl Among the Anarchists","id":1161025323},{"url":"http://www.gutenberg.org/dirs/1/4/6/0/14605/14605-8.txt","text":"He
+        mustn''t palter, or trifle, or shilly-shally about that iron certainty.","title":"The
+        Devil''s Garden","id":1182673353},{"url":"http://etext.lib.virginia.edu/etcbin/toccer-new2?id=BurLady.sgm&images=images%2Fmodeng&data=%2Ftexts%2Fenglish%2Fmodeng%2Fparsed&tag=public&part=all","text":"Lie
+        to her if you can, palter if you know how; try upon her the smallest honest
+        shrewd trick, and see how it fares with you.","title":"A Lady of Quality","id":946712193}]}'
+  recorded_at: Sat, 07 Sep 2024 23:40:12 GMT
 recorded_with: VCR 6.3.1

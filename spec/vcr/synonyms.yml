@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.wordnik.com/v4/word.json/ugly/relatedWords?api_key=API_KEY&relationshipTypes=synonym
+    uri: https://api.wordnik.com/v4/word.json/ugly/relatedWords?api_key=API_KEY&limitPerRelationshipType=10&relationshipTypes=synonym
     body:
       encoding: US-ASCII
       string: ''
@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Fri, 06 Sep 2024 19:56:46 GMT
+      - Sat, 07 Sep 2024 23:40:20 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -25,25 +25,25 @@ http_interactions:
       server:
       - nginx/1.24.0
       x-ratelimit-remaining-hour:
-      - '14972'
+      - '14950'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '14'
+      - '40'
       ratelimit-remaining:
-      - '498'
+      - '492'
       ratelimit-limit:
       - '500'
       x-ratelimit-limit-minute:
       - '500'
       x-ratelimit-remaining-minute:
-      - '498'
+      - '492'
       cache-control:
       - no-cache
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '9'
+      - '3'
       x-kong-proxy-latency:
       - '1'
       via:
@@ -53,5 +53,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '[{"relationshipType":"synonym","words":["abominable","alarming","awkward","bad","bad-tempered","base","bearish","beautiless","bitchy","bitter"]}]'
-  recorded_at: Fri, 06 Sep 2024 19:56:46 GMT
+  recorded_at: Sat, 07 Sep 2024 23:40:20 GMT
 recorded_with: VCR 6.3.1

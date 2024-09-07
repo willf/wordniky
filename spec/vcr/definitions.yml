@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.wordnik.com/v4/word.json/ruby/definitions?api_key=API_KEY
+    uri: https://api.wordnik.com/v4/word.json/ruby/definitions?api_key=API_KEY&limit=200
     body:
       encoding: US-ASCII
       string: ''
@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Fri, 06 Sep 2024 19:48:30 GMT
+      - Sat, 07 Sep 2024 23:40:13 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -24,20 +24,20 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-minute:
-      - '499'
-      x-ratelimit-limit-minute:
-      - '500'
+      x-ratelimit-remaining-hour:
+      - '14956'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '31'
+      - '47'
       ratelimit-remaining:
-      - '499'
+      - '498'
       ratelimit-limit:
       - '500'
-      x-ratelimit-remaining-hour:
-      - '14989'
+      x-ratelimit-limit-minute:
+      - '500'
+      x-ratelimit-remaining-minute:
+      - '498'
       cache-control:
       - no-cache
       vary:
@@ -47,9 +47,9 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '11'
+      - '13'
       x-kong-proxy-latency:
-      - '1'
+      - '0'
       via:
       - kong/3.4.1
     body:
@@ -104,9 +104,7 @@ http_interactions:
         ruby gorget.","word":"ruby","attributionUrl":"https://www.wordnik.com/colophon#century/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]},{"attributionText":"from
         The Century Dictionary.","sourceDictionary":"century","text":"Of a color resembling
         that of the ruby; of a rich red color inclining toward crimson.","word":"ruby","attributionUrl":"https://www.wordnik.com/colophon#century/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]},{"attributionText":"from
-        The Century Dictionary.","sourceDictionary":"century","text":"To make red.","word":"ruby","attributionUrl":"https://www.wordnik.com/colophon#century/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]},{"partOfSpeech":"adjective","attributionText":"from
-        the GNU version of the Collaborative International Dictionary of English.","sourceDictionary":"gcide","text":"Ruby-colored;
-        red.","word":"ruby","exampleUses":[{"text":"<ex>ruby</ex> lips","position":0}],"attributionUrl":"http://gcide.gnu.org.ua/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]},{"partOfSpeech":"transitive
+        The Century Dictionary.","sourceDictionary":"century","text":"To make red.","word":"ruby","attributionUrl":"https://www.wordnik.com/colophon#century/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]},{"partOfSpeech":"transitive
         verb","attributionText":"from the GNU version of the Collaborative International
         Dictionary of English.","sourceDictionary":"gcide","text":"To make red; to
         redden.","labels":[{"text":"rare","type":"mark"}],"citations":[{"source":"Pope."}],"word":"ruby","attributionUrl":"http://gcide.gnu.org.ua/","wordnikUrl":"https://www.wordnik.com/words/ruby","exampleUses":[],"notes":[],"relatedWords":[],"textProns":[]},{"partOfSpeech":"noun","attributionText":"from
@@ -131,7 +129,9 @@ http_interactions:
         the GNU version of the Collaborative International Dictionary of English.","sourceDictionary":"gcide","text":"zinc
         sulphide; the mineral zinc blende or sphalerite.","labels":[{"text":"(Min.)","type":"fld"}],"word":"ruby","attributionUrl":"http://gcide.gnu.org.ua/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"notes":[],"relatedWords":[],"textProns":[]},{"partOfSpeech":"noun","attributionText":"from
         the GNU version of the Collaborative International Dictionary of English.","sourceDictionary":"gcide","text":"red
-        silver. See under <er>Red</er>.","labels":[{"text":"(Min.)","type":"fld"}],"word":"ruby","attributionUrl":"http://gcide.gnu.org.ua/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"notes":[],"relatedWords":[],"textProns":[]},{"partOfSpeech":"noun","attributionText":"from
+        silver. See under <er>Red</er>.","labels":[{"text":"(Min.)","type":"fld"}],"word":"ruby","attributionUrl":"http://gcide.gnu.org.ua/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"notes":[],"relatedWords":[],"textProns":[]},{"partOfSpeech":"adjective","attributionText":"from
+        the GNU version of the Collaborative International Dictionary of English.","sourceDictionary":"gcide","text":"Ruby-colored;
+        red.","word":"ruby","exampleUses":[{"text":"<ex>ruby</ex> lips","position":0}],"attributionUrl":"http://gcide.gnu.org.ua/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]},{"partOfSpeech":"noun","attributionText":"from
         Wiktionary, Creative Commons Attribution/Share-Alike License.","sourceDictionary":"wiktionary","text":"A
         clear, deep, <xref>red</xref> variety of <xref>corundum</xref>, valued as
         a precious stone.","word":"ruby","attributionUrl":"http://creativecommons.org/licenses/by-sa/3.0/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]},{"partOfSpeech":"noun","attributionText":"from
@@ -160,5 +160,5 @@ http_interactions:
         WordNet 3.0 Copyright 2006 by Princeton University. All rights reserved.","sourceDictionary":"wordnet","text":"of
         a color at the end of the color spectrum (next to orange); resembling the
         color of blood or cherries or tomatoes or rubies","word":"ruby","attributionUrl":"https://wordnet.princeton.edu/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]}]'
-  recorded_at: Fri, 06 Sep 2024 19:48:30 GMT
+  recorded_at: Sat, 07 Sep 2024 23:40:13 GMT
 recorded_with: VCR 6.3.1

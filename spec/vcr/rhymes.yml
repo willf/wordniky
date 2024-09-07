@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.wordnik.com/v4/word.json/suffering/relatedWords?api_key=API_KEY&relationshipTypes=rhyme
+    uri: https://api.wordnik.com/v4/word.json/suffering/relatedWords?api_key=API_KEY&limitPerRelationshipType=10&relationshipTypes=rhyme
     body:
       encoding: US-ASCII
       string: ''
@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Fri, 06 Sep 2024 19:56:45 GMT
+      - Sat, 07 Sep 2024 23:40:19 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -24,26 +24,26 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-minute:
-      - '498'
-      x-ratelimit-limit-minute:
-      - '500'
+      x-ratelimit-remaining-hour:
+      - '14951'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '15'
+      - '41'
       ratelimit-remaining:
-      - '498'
+      - '493'
       ratelimit-limit:
       - '500'
-      x-ratelimit-remaining-hour:
-      - '14982'
+      x-ratelimit-limit-minute:
+      - '500'
+      x-ratelimit-remaining-minute:
+      - '493'
       cache-control:
       - no-cache
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '5'
+      - '4'
       x-kong-proxy-latency:
       - '0'
       via:
@@ -53,5 +53,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '[{"relationshipType":"rhyme","words":["buffering"]}]'
-  recorded_at: Fri, 06 Sep 2024 19:56:45 GMT
+  recorded_at: Sat, 07 Sep 2024 23:40:19 GMT
 recorded_with: VCR 6.3.1

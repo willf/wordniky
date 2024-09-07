@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Fri, 06 Sep 2024 19:53:33 GMT
+      - Sat, 07 Sep 2024 23:40:16 GMT
       content-type:
       - application/json; charset=utf-8
       content-length:
@@ -24,20 +24,20 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-minute:
-      - '499'
-      x-ratelimit-limit-minute:
-      - '500'
+      x-ratelimit-remaining-hour:
+      - '14952'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '27'
+      - '44'
       ratelimit-remaining:
-      - '499'
+      - '494'
       ratelimit-limit:
       - '500'
-      x-ratelimit-remaining-hour:
-      - '14987'
+      x-ratelimit-limit-minute:
+      - '500'
+      x-ratelimit-remaining-minute:
+      - '494'
       cache-control:
       - no-cache
       accept-ranges:
@@ -45,13 +45,13 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '8'
+      - '4'
       x-kong-proxy-latency:
-      - '1'
+      - '0'
       via:
       - kong/3.4.1
     body:
       encoding: UTF-8
       string: '{"value":9}'
-  recorded_at: Fri, 06 Sep 2024 19:53:33 GMT
+  recorded_at: Sat, 07 Sep 2024 23:40:16 GMT
 recorded_with: VCR 6.3.1
