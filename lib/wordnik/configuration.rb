@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'yaml'
 
 module Wordnik
@@ -7,17 +9,15 @@ module Wordnik
     def initialize
       defaults = {
         api_url: 'https://api.wordnik.com',
-        api_version: 'v4',
+        api_version: 'v4'
       }
       loaded = look_for_config_file
       @api_key = loaded['api_key'] || ENV['WORDNIK_API_KEY']
       @api_url = loaded['api_url'] || defaults[:api_url]
       @api_version = loaded['api_version'] || defaults[:api_version]
-      if @api_key.nil?
-        raise 'No API key found. Please set it in the environment variable WORDNIK_API_KEY or in a .wordnik.yml file'
-      end
+      return unless @api_key.nil?
 
-      self
+      raise 'No API key found. Please set it in the environment variable WORDNIK_API_KEY or in a .wordnik.yml file'
     end
 
     def look_for_config_file

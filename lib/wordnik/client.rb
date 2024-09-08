@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'faraday'
 
 module Wordnik
@@ -25,9 +27,7 @@ module Wordnik
     def audio(word, limit = 50)
       params = { limit: limit }
       results = call_with_path("word.json/#{word}/audio", params)
-      if is_error?(results)
-        raise Wordnik::Error, results[:message]
-      end
+      raise Wordnik::Error, results[:message] if is_error?(results)
 
       @clean_up && results.is_a?(Hash) ? [] : results
     end
@@ -50,14 +50,12 @@ module Wordnik
       params[:part_of_speech] = ensure_csv(part_of_speech) if part_of_speech
       params[:source_dictionaries] = ensure_csv(source_dictionaries) if source_dictionaries
       results = call_with_path("word.json/#{word}/definitions", params)
-      if is_error?(results)
-        raise Wordnik::Error, results[:message]
-      end
+      raise Wordnik::Error, results[:message] if is_error?(results)
 
       @clean_up ? results.select { |r| r[:text] } : results
     end
 
-    alias_method :defs, :definitions
+    alias defs definitions
 
     # Fetches etymologies for a word.
     # @param word [String] the word to fetch etymologies for.
@@ -67,9 +65,7 @@ module Wordnik
       params = {}
       results = call_with_path("word.json/#{word}/etymologies", params)
       # foolishly, the API returns a 500 error if the word is not found
-      if results.is_a?(Hash) && results[:status_code] != 500
-        raise Wordnik::Error, results[:message]
-      end
+      raise Wordnik::Error, results[:message] if results.is_a?(Hash) && results[:status_code] != 500
 
       if @clean_up && results.is_a?(Hash)
         []
@@ -90,11 +86,9 @@ module Wordnik
     def examples(word, include_duplicates: false, skip: 0, limit: 10)
       params = { limit: limit }
       params[:include_duplicates] = include_duplicates if include_duplicates
-      params[:skip] = skip if skip && skip > 0
+      params[:skip] = skip if skip&.positive?
       results = call_with_path("word.json/#{word}/examples", params)
-      if is_error?(results)
-        raise Wordnik::Error, results[:message]
-      end
+      raise Wordnik::Error, results[:message] if is_error?(results)
 
       if @clean_up && is_404?(results)
         []
@@ -116,9 +110,7 @@ module Wordnik
       params[:start_year] = start_year if start_year
       params[:end_year] = end_year if end_year
       results = call_with_path("word.json/#{word}/frequency", params)
-      if is_error?(results)
-        raise Wordnik::Error, results[:message]
-      end
+      raise Wordnik::Error, results[:message] if is_error?(results)
 
       if @clean_up && is_404?(results)
         []
@@ -139,9 +131,7 @@ module Wordnik
       params = { limit: limit }
       params[:source_dictionary] = source_dictionary if source_dictionary
       results = call_with_path("word.json/#{word}/hyphenation", params)
-      if is_error?(results)
-        raise Wordnik::Error, results[:message]
-      end
+      raise Wordnik::Error, results[:message] if is_error?(results)
 
       @clean_up && is_404?(results) ? [] : results
     end
@@ -157,9 +147,7 @@ module Wordnik
       params = { limit: limit }
       params[:wlmi] = wlmi if wlmi
       results = call_with_path("word.json/#{word}/phrases", params)
-      if is_error?(results)
-        raise Wordnik::Error, results[:message]
-      end
+      raise Wordnik::Error, results[:message] if is_error?(results)
 
       @clean_up && is_404?(results) ? [] : results
     end
@@ -176,9 +164,7 @@ module Wordnik
       params[:source_dictionary] = source_dictionary if source_dictionary
       params[:type_format] = type_format if type_format
       results = call_with_path("word.json/#{word}/pronunciations", params)
-      if is_error?(results)
-        raise Wordnik::Error, results[:message]
-      end
+      raise Wordnik::Error, results[:message] if is_error?(results)
 
       if @clean_up
         if is_404?(results)
@@ -202,9 +188,7 @@ module Wordnik
       params = { limit_per_relationship_type: limit_per_relationship_type }
       params[:relationship_types] = ensure_csv(relationship_types) if relationship_types
       results = call_with_path("word.json/#{word}/relatedWords", params)
-      if is_error?(results)
-        raise Wordnik::Error, results[:message]
-      end
+      raise Wordnik::Error, results[:message] if is_error?(results)
 
       @clean_up && is_404?(results) ? [] : results
     end
@@ -215,9 +199,7 @@ module Wordnik
     # @raise [Wordnik::Error] if some error is returned by the API.
     def scrabble_score(word, params = {})
       results = call_with_path("word.json/#{word}/scrabbleScore", params)
-      if is_error?(results)
-        raise Wordnik::Error, results[:message]
-      end
+      raise Wordnik::Error, results[:message] if is_error?(results)
 
       if @clean_up && is_404?(results)
         0
@@ -235,9 +217,7 @@ module Wordnik
     def top_example(word)
       params = {}
       results = call_with_path("word.json/#{word}/topExample", params)
-      if is_error?(results)
-        raise Wordnik::Error, results[:message]
-      end
+      raise Wordnik::Error, results[:message] if is_error?(results)
 
       if @clean_up && is_404?(results)
         {}
@@ -279,10 +259,8 @@ module Wordnik
       params[:max_dictionary_count] = max_dictionary_count if max_dictionary_count
       params[:min_length] = min_length if min_length
       params[:max_length] = max_length if max_length
-      results = call_with_path("words.json/randomWord", params)
-      if is_error?(results)
-        raise Wordnik::Error, results[:message]
-      end
+      results = call_with_path('words.json/randomWord', params)
+      raise Wordnik::Error, results[:message] if is_error?(results)
 
       @clean_up ? results[:word] : results
     end
@@ -300,10 +278,8 @@ module Wordnik
       params[:max_dictionary_count] = max_dictionary_count if max_dictionary_count
       params[:min_length] = min_length if min_length
       params[:max_length] = max_length if max_length
-      results = call_with_path("words.json/randomWords", params)
-      if is_error?(results)
-        raise Wordnik::Error, results[:message]
-      end
+      results = call_with_path('words.json/randomWords', params)
+      raise Wordnik::Error, results[:message] if is_error?(results)
 
       @clean_up ? results.map { |w| w[:word] } : results
     end
@@ -321,15 +297,13 @@ module Wordnik
     def word_of_the_day(date: nil)
       params = {}
       params[:date] = date if date
-      results = call_with_path("words.json/wordOfTheDay", params)
-      if is_error?(results)
-        raise Wordnik::Error, results[:message]
-      end
+      results = call_with_path('words.json/wordOfTheDay', params)
+      raise Wordnik::Error, results[:message] if is_error?(results)
 
-      @clean_up && results == "" ? nil : results
+      @clean_up && results == '' ? nil : results
     end
 
-    alias_method :wotd, :word_of_the_day
+    alias wotd word_of_the_day
 
     ## Extras!
 
@@ -338,10 +312,10 @@ module Wordnik
     # @param limit [Integer] the maximum number of results to return. Default is 10.
     # @return [Array] Array of antonyms.
     # @raise [Wordnik::Error] if some error is returned by the API.
-    def rhymes(word, limit: 10)
-      related_words("suffering", relationship_types: :rhyme, limit_per_relationship_type: limit).map { |r|
+    def rhymes(_word, limit: 10)
+      related_words('suffering', relationship_types: :rhyme, limit_per_relationship_type: limit).map do |r|
         r[:words]
-      }.flatten
+      end.flatten
     end
 
     # Fetches antonyms for a word.
@@ -350,9 +324,9 @@ module Wordnik
     # @return [Array] Array of antonyms.
     # @raise [Wordnik::Error] if some error is returned by the API.
     def antonyms(word, limit: 10)
-      related_words(word, relationship_types: :antonym, limit_per_relationship_type: limit).map { |r|
+      related_words(word, relationship_types: :antonym, limit_per_relationship_type: limit).map do |r|
         r[:words]
-      }.flatten
+      end.flatten
     end
 
     # Fetches synonyms for a word.
@@ -361,9 +335,9 @@ module Wordnik
     # @return [Array] Array of antonyms.
     # @raise [Wordnik::Error] if some error is returned by the API.
     def synonyms(word, limit: 10)
-      related_words(word, relationship_types: :synonym, limit_per_relationship_type: limit).map { |r|
+      related_words(word, relationship_types: :synonym, limit_per_relationship_type: limit).map do |r|
         r[:words]
-      }.flatten
+      end.flatten
     end
 
     # Fetches hypernyms for a word.
@@ -372,9 +346,9 @@ module Wordnik
     # @return [Array] Array of antonyms.
     # @raise [Wordnik::Error] if some error is returned by the API.
     def hypernyms(word, limit: 10)
-      related_words(word, relationship_types: :hypernym, limit_per_relationship_type: limit).map { |r|
+      related_words(word, relationship_types: :hypernym, limit_per_relationship_type: limit).map do |r|
         r[:words]
-      }.flatten
+      end.flatten
     end
 
     # Fetches hyponyms for a word.
@@ -383,9 +357,9 @@ module Wordnik
     # @return [Array] Array of antonyms.
     # @raise [Wordnik::Error] if some error is returned by the API.
     def hyponyms(word, limit: 10)
-      related_words(word, relationship_types: :hyponym, limit_per_relationship_type: limit).map { |r|
+      related_words(word, relationship_types: :hyponym, limit_per_relationship_type: limit).map do |r|
         r[:words]
-      }.flatten
+      end.flatten
     end
 
     # Fetches equivalents for a word.
@@ -394,9 +368,9 @@ module Wordnik
     # @return [Array] Array of antonyms.
     # @raise [Wordnik::Error] if some error is returned by the API.
     def equivalents(word, limit: 10)
-      related_words(word, relationship_types: :equivalent, limit_per_relationship_type: limit).map { |r|
+      related_words(word, relationship_types: :equivalent, limit_per_relationship_type: limit).map do |r|
         r[:words]
-      }.flatten
+      end.flatten
     end
 
     private
@@ -427,13 +401,13 @@ module Wordnik
     end
 
     def ensure_csv(value)
-      value.is_a?(Array) ? value.join(",") : value
+      value.is_a?(Array) ? value.join(',') : value
     end
 
     def cleanup_etymology_result(result)
       # looks like this: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<ety>[AS. <ets>hÔøΩsian</ets>.]</ety>\n"
       # want to return this: "AS. hÔøΩsian"
-      result.gsub(/<.*?>/, "").gsub(/[\n\r]/, "").gsub(/[\[\]]/, "").strip
+      result.gsub(/<.*?>/, '').gsub(/[\n\r]/, '').gsub(/[\[\]]/, '').strip
     end
 
     def is_404?(result)

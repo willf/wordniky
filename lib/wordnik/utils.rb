@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 # deep transform keys of a hash to symbols in snake case
 require 'time'
 
 module Wordnik
-  extend self
+  module_function
 
   def to_timestamp_safely(thing)
     if thing.is_a?(String)
@@ -14,23 +16,19 @@ module Wordnik
 
       return thing
     end
-    return thing
+    thing
   end
 
   def capitalize_simple(str)
-    if str.size == 0
-      return str
-    end
+    return str if str.empty?
 
-    str[0].upcase + str[1..-1]
+    str[0].upcase + str[1..]
   end
 
   def lowercase_simple(str)
-    if str.size == 0
-      return str
-    end
+    return str if str.empty?
 
-    str[0].downcase + str[1..-1]
+    str[0].downcase + str[1..]
   end
 
   def to_underscore(str)
@@ -38,15 +36,13 @@ module Wordnik
     str.gsub(/::/, '/')
        .gsub(/([A-Z]+)([A-Z][a-z])/, '\1_\2')
        .gsub(/([a-z\d])([A-Z])/, '\1_\2')
-       .tr("-", "_")
+       .tr('-', '_')
        .downcase
   end
 
   def to_camel(str)
     str = str.to_s
-    if str.size == 0
-      return str
-    end
+    return str if str.empty?
 
     s = str.split('_').map { |part| capitalize_simple(part) }.join
     lowercase_simple(s)
