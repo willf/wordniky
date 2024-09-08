@@ -7,6 +7,9 @@
 
 name: Ruby
 
+env:
+  WORDNIK_API_KEY: not-a-real-key
+
 on:
   push:
     branches: ["main"]
