@@ -54,7 +54,7 @@ module Wordnik
         raise Wordnik::Error, results[:message]
       end
 
-      @clean_up ? results.select { |r| r[:id] } : results
+      @clean_up ? results.select { |r| r[:text] } : results
     end
 
     alias_method :defs, :definitions
