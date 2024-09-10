@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sat, 07 Sep 2024 23:40:19 GMT
+      - Tue, 10 Sep 2024 19:16:49 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -24,36 +24,34 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-minute:
-      - '489'
-      x-ratelimit-limit-minute:
-      - '500'
+      x-ratelimit-remaining-hour:
+      - '14992'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '43'
+      - '11'
       ratelimit-remaining:
-      - '489'
+      - '492'
       ratelimit-limit:
       - '500'
-      x-ratelimit-remaining-hour:
-      - '14958'
+      x-ratelimit-limit-minute:
+      - '500'
+      x-ratelimit-remaining-minute:
+      - '492'
       cache-control:
       - no-cache
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '1362'
+      - '56'
       x-kong-proxy-latency:
-      - '1'
+      - '0'
       via:
       - kong/3.4.1
       content-encoding:
       - gzip
     body:
       encoding: UTF-8
-      string: '[{"word":"traffic cones","id":0},{"word":"banishes","id":0},{"word":"quartersawing","id":0},{"word":"belt
-        up","id":0},{"word":"reconceptualize","id":0},{"word":"bibliomaniac","id":0},{"word":"strekelia","id":0},{"word":"indigo-bird","id":0},{"word":"fanny
-        fart","id":0},{"word":"shortcuts","id":0}]'
-  recorded_at: Sat, 07 Sep 2024 23:40:19 GMT
+      string: '[{"word":"myofibre","id":0},{"word":"liotheidæ","id":0},{"word":"sweatshops","id":0},{"word":"bastnaesite","id":0},{"word":"deserializer","id":0},{"word":"hydroscope","id":0},{"word":"Pernambuco","id":0},{"word":"mope-hawk","id":0},{"word":"ingen","id":0},{"word":"Adelaidean","id":0}]'
+  recorded_at: Tue, 10 Sep 2024 19:16:49 GMT
 recorded_with: VCR 6.3.1

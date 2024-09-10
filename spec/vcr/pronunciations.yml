@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sat, 07 Sep 2024 23:40:16 GMT
+      - Tue, 10 Sep 2024 19:16:48 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -24,20 +24,20 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-minute:
-      - '492'
-      x-ratelimit-limit-minute:
-      - '500'
+      x-ratelimit-remaining-hour:
+      - '14994'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '44'
+      - '12'
       ratelimit-remaining:
-      - '492'
+      - '494'
       ratelimit-limit:
       - '500'
-      x-ratelimit-remaining-hour:
-      - '14961'
+      x-ratelimit-limit-minute:
+      - '500'
+      x-ratelimit-remaining-minute:
+      - '494'
       cache-control:
       - no-cache
       access-control-allow-origin:
@@ -54,5 +54,5 @@ http_interactions:
       encoding: UTF-8
       string: '[{"seq":0,"raw":"roo͞′bē","rawType":"ahd-5","id":"R5365500","attributionText":"from
         The American Heritage® Dictionary of the English Language, 5th Edition.","attributionUrl":"https://ahdictionary.com/"}]'
-  recorded_at: Sat, 07 Sep 2024 23:40:16 GMT
+  recorded_at: Tue, 10 Sep 2024 19:16:48 GMT
 recorded_with: VCR 6.3.1

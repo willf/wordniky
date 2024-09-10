@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sat, 07 Sep 2024 23:40:13 GMT
+      - Tue, 10 Sep 2024 19:16:45 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -24,20 +24,20 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-hour:
-      - '14955'
+      x-ratelimit-remaining-minute:
+      - '497'
+      x-ratelimit-limit-minute:
+      - '500'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '47'
+      - '15'
       ratelimit-remaining:
       - '497'
       ratelimit-limit:
       - '500'
-      x-ratelimit-limit-minute:
-      - '500'
-      x-ratelimit-remaining-minute:
-      - '497'
+      x-ratelimit-remaining-hour:
+      - '14997'
       cache-control:
       - no-cache
       vary:
@@ -47,9 +47,9 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '24'
+      - '28'
       x-kong-proxy-latency:
-      - '0'
+      - '1'
       via:
       - kong/3.4.1
     body:
@@ -261,5 +261,5 @@ http_interactions:
         of various mostly cold-blooded aquatic vertebrates usually having scales and
         breathing through gills","word":"fish","exampleUses":[{"text":"in the living
         room there was a tank of colorful fish","position":0}],"attributionUrl":"https://wordnet.princeton.edu/","wordnikUrl":"https://www.wordnik.com/words/fish","citations":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]}]'
-  recorded_at: Sat, 07 Sep 2024 23:40:13 GMT
+  recorded_at: Tue, 10 Sep 2024 19:16:45 GMT
 recorded_with: VCR 6.3.1

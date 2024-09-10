@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sat, 07 Sep 2024 23:40:13 GMT
+      - Tue, 10 Sep 2024 19:16:45 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -24,20 +24,20 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-hour:
-      - '14956'
+      x-ratelimit-remaining-minute:
+      - '498'
+      x-ratelimit-limit-minute:
+      - '500'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '47'
+      - '15'
       ratelimit-remaining:
       - '498'
       ratelimit-limit:
       - '500'
-      x-ratelimit-limit-minute:
-      - '500'
-      x-ratelimit-remaining-minute:
-      - '498'
+      x-ratelimit-remaining-hour:
+      - '14998'
       cache-control:
       - no-cache
       vary:
@@ -47,7 +47,7 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '13'
+      - '18'
       x-kong-proxy-latency:
       - '0'
       via:
@@ -160,5 +160,5 @@ http_interactions:
         WordNet 3.0 Copyright 2006 by Princeton University. All rights reserved.","sourceDictionary":"wordnet","text":"of
         a color at the end of the color spectrum (next to orange); resembling the
         color of blood or cherries or tomatoes or rubies","word":"ruby","attributionUrl":"https://wordnet.princeton.edu/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]}]'
-  recorded_at: Sat, 07 Sep 2024 23:40:13 GMT
+  recorded_at: Tue, 10 Sep 2024 19:16:45 GMT
 recorded_with: VCR 6.3.1

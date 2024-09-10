@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sat, 07 Sep 2024 23:40:20 GMT
+      - Tue, 10 Sep 2024 19:16:50 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -24,28 +24,28 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-hour:
-      - '14950'
+      x-ratelimit-remaining-minute:
+      - '490'
+      x-ratelimit-limit-minute:
+      - '500'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '40'
+      - '10'
       ratelimit-remaining:
-      - '492'
+      - '490'
       ratelimit-limit:
       - '500'
-      x-ratelimit-limit-minute:
-      - '500'
-      x-ratelimit-remaining-minute:
-      - '492'
+      x-ratelimit-remaining-hour:
+      - '14990'
       cache-control:
       - no-cache
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '3'
+      - '4'
       x-kong-proxy-latency:
-      - '1'
+      - '0'
       via:
       - kong/3.4.1
       content-encoding:
@@ -53,5 +53,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '[{"relationshipType":"synonym","words":["abominable","alarming","awkward","bad","bad-tempered","base","bearish","beautiless","bitchy","bitter"]}]'
-  recorded_at: Sat, 07 Sep 2024 23:40:20 GMT
+  recorded_at: Tue, 10 Sep 2024 19:16:50 GMT
 recorded_with: VCR 6.3.1

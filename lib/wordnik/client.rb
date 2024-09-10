@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require 'faraday'
+require 'json'
+require 'net/http'
 
 module Wordnik
   class Error < StandardError; end
@@ -14,8 +15,9 @@ module Wordnik
     #      If true, the results will be cleaned up in various ways. Generally, this means
     #      404 (Missing) results will be returned as empty arrays. Other results will generally
     #      be cleaned up to return arrays. Etyomologies will be cleaned up to remove XML tags.
-    def initialize(configuration: nil, clean_up: true)
+    def initialize(configuration: nil, http_client: nil, clean_up: true)
       @configuration = configuration || Configuration.new
+      @http_client = http_client || create_net_https_client
       @clean_up = clean_up
     end
 
@@ -375,18 +377,22 @@ module Wordnik
 
     private
 
+    def create_net_https_client
+      client = Net::HTTP.new(@configuration.api_host, @configuration.api_port)
+      client.use_ssl = true
+      client
+    end
+
     def call(url, params)
       params[:api_key] = @configuration.api_key
-      Faraday.new(url: url) do |conn|
-        conn.request :url_encoded
-        conn.adapter Faraday.default_adapter
-        conn.response :json
-        conn.request :json
-      end.get(url, params)
+      uri = URI.parse(url)
+      uri.query = URI.encode_www_form(params)
+      response = @http_client.get(uri)
+      JSON.parse(response.body, symbolize_names: true)
     end
 
     def compose_url(path)
-      "#{configuration.api_url}/#{configuration.api_version}/#{path}"
+      "https://#{configuration.api_host}/#{configuration.api_version}/#{path}"
     end
 
     def normalize_params(params)
@@ -396,7 +402,7 @@ module Wordnik
     def call_with_path(path, params)
       url = compose_url(path)
       params = normalize_params(params)
-      b = call(url, params).body
+      b = call(url, params)
       Wordnik.to_snake_case(b)
     end
 

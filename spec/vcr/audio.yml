@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sat, 07 Sep 2024 23:40:19 GMT
+      - Tue, 10 Sep 2024 19:16:49 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -24,20 +24,20 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-minute:
-      - '488'
-      x-ratelimit-limit-minute:
-      - '500'
+      x-ratelimit-remaining-hour:
+      - '14991'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '41'
+      - '11'
       ratelimit-remaining:
-      - '488'
+      - '491'
       ratelimit-limit:
       - '500'
-      x-ratelimit-remaining-hour:
-      - '14957'
+      x-ratelimit-limit-minute:
+      - '500'
+      x-ratelimit-remaining-minute:
+      - '491'
       cache-control:
       - no-cache
       vary:
@@ -47,18 +47,18 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '24'
+      - '29'
       x-kong-proxy-latency:
-      - '1'
+      - '0'
       via:
       - kong/3.4.1
     body:
       encoding: UTF-8
-      string: '[{"commentCount":0,"createdBy":"ahd","createdAt":"2024-09-07T23:40:19.603+0000","id":51234,"word":"ruby","duration":0.94,"audioType":"pronunciation","attributionText":"from
-        The American Heritage® Dictionary of the English Language, 5th Edition","attributionUrl":"https://www.wordnik.com/words/ruby","fileUrl":"https://audio.wordnik.com/54215.mp3?Expires=1725753019&Key-Pair-Id=APKAIHXX6B6C37D2VKVA&Signature=TSRX7tW57k8-SRrfU42lE1ISX-~gLSLKnMTCHRdWxMmU9T9oG4tMItROQjZxDZAFRqrsevTpXRpwU8lJMzO-kngwOrolhbcX5Vd23OHR7mzRdNUYCkxBvCaqtiEP2Eojzqzfoi7A8n7dQs6wlEnzbyyCECr7LGTcfraba6ThbMm7a0vwg7UX7O0MeN1v5q1PvtmsIHNlzYXYrt1H2WevxPiyigVxm34uEG9tRSJRaoHmnpIi-x4US2sUYgPXCH8XBuZe0PVkDrwZx7X4TF3TErgUjtotrwLIug3DYW586-DEBkbcNWXwb1K42KMjzQH6nWoPYnVNEo1k5~FUa2HHUQ__"},{"commentCount":0,"createdBy":"macmillan","createdAt":"2024-09-07T23:40:19.610+0000","id":236223,"word":"ruby","duration":1.01,"audioType":"pronunciation","attributionText":"pronunciation
+      string: '[{"commentCount":0,"createdBy":"ahd","createdAt":"2024-09-10T19:16:49.376+0000","id":51234,"word":"ruby","duration":0.94,"audioType":"pronunciation","attributionText":"from
+        The American Heritage® Dictionary of the English Language, 5th Edition","attributionUrl":"https://www.wordnik.com/words/ruby","fileUrl":"https://audio.wordnik.com/54215.mp3?Expires=1725996409&Key-Pair-Id=APKAIHXX6B6C37D2VKVA&Signature=CRQjppIxookEJbxRmEKFiODkm6n94XgXYsq71Cj9Qei3nN1ds6v5~cYbKaHmbNyiEeB895xCzqgaR8jBe-1GlwMwN3gUYP~rsdKMY8z9sb1FWCk45jsdi14cAcmkHlu0kY3EpyPS7W-~v26ZK2zIim1muO3VaUZacjVtD2plSHinoRosfNgoZVjb1P9ScA9vfaq~8WMmls4BkkbaTgc5rEaCtguU55j8vzKM15uiJ5EO1WmC3IDfPMC9ekl7ej4ApGtzEZNK21EOB4T~xpSIF01lfJLp~yin~MlnyTsrZuDvetfGeavJU0LPcPQbSI0ON3HLa9YpOdcbLNLFTxqyVQ__"},{"commentCount":0,"createdBy":"macmillan","createdAt":"2024-09-10T19:16:49.381+0000","id":236224,"word":"ruby","duration":0.91,"audioType":"pronunciation","attributionText":"pronunciation
         of ruby from Macmillan Dictionary -- free online dictionary and thesaurus","description":"See
-        more at https://www.macmillandictionary.com/dictionary/american/ruby","attributionUrl":"https://www.macmillandictionary.com/dictionary/american/ruby","fileUrl":"https://audio.wordnik.com/11437224.mp3?Expires=1725753019&Key-Pair-Id=APKAIHXX6B6C37D2VKVA&Signature=G5Nk8eiWJfqJPexOHNYdW0bjGTl2Zfj-FTNzmM-s1pKyEuBN~hNc5R~dxtXhe0xjHgxb0MkTqCwYRx9zSKq2jndluz5pJyp9Us3cPJ80XkNzB8LJf1Ows3XfkR0VuUxXQ-nTzcB5dvFBKVdd8MPFatBTTkjXFS3sWcKZOm~wdAQY-N0LQSbdfLCUIJbUqQS5Ldu8ptMxLW9P~QdMiRl~ypzJIWxmPBdxq~anj4YTBlgCxfRbLBTyVBYCzdagsIBEtB9yMeBqMZ3xQe~TAu-eQXCESGUwu~nuV8T4sXkvhsxDdBj4MHZ3bYbCQbT~pDvemANHEMrqj3MDqK9wjePmpA__"},{"commentCount":0,"createdBy":"macmillan","createdAt":"2024-09-07T23:40:19.616+0000","id":236224,"word":"ruby","duration":0.91,"audioType":"pronunciation","attributionText":"pronunciation
+        more at https://www.macmillandictionary.com/dictionary/american/ruby","attributionUrl":"https://www.macmillandictionary.com/dictionary/american/ruby","fileUrl":"https://audio.wordnik.com/11437225.mp3?Expires=1725996409&Key-Pair-Id=APKAIHXX6B6C37D2VKVA&Signature=moHRNX5Qn9Y7E~7DRqsw57zX3AOZxcbVatyMVfFLAFA7TURlfpwmFPTKWl~F-cfGO2XbdBGpP-Yldr7c8J~PFvzLl3Oq4SARiI1iWzg1JoqF53V5kOdUrrq9GRX-Poxceu9BFMG9RiOQbR-IluGR7gAOJMTTiorX1~Jan8GO-65uVpc2pmnNKomkJ83Qnc9oaE-M8W4AGrsm369AGSMg6R4vMbux5L6oniHjcKhuw0Op-eKc4Kl1ZN2O1awQf4UnRbSnWQoh3i-0KhRE9TdMKRgrXj-fFlDk5YiQ24aLkeTJVDVFDTmxBdDXo0UhFE1AULZjCthRLJMHxRCtS2igcQ__"},{"commentCount":0,"createdBy":"macmillan","createdAt":"2024-09-10T19:16:49.387+0000","id":236223,"word":"ruby","duration":1.01,"audioType":"pronunciation","attributionText":"pronunciation
         of ruby from Macmillan Dictionary -- free online dictionary and thesaurus","description":"See
-        more at https://www.macmillandictionary.com/dictionary/american/ruby","attributionUrl":"https://www.macmillandictionary.com/dictionary/american/ruby","fileUrl":"https://audio.wordnik.com/11437225.mp3?Expires=1725753019&Key-Pair-Id=APKAIHXX6B6C37D2VKVA&Signature=ZGVZnM6za6on3wJhcS77GJEvh0JBa9bdqR6EKT32u-XV1XCnj93tNLn-ijrj5kxrnCiypnKFYWYhFNBku7LSRVrte2f-iM5TfAp7o7gDM03UOU31SQ4uLwcNBs1FPXD9BXlhUpuokrWBXokipSVyeupSE0soEBTm9hG93LBn4LyYlmuPo53GowPHPz7msNfL7-W5o8z6ne3ouheVhaqP9MEQy~J~ncqrlUnef9e8VJojfUOC0F-spmJSb9tEAyENlC5eqkdFiXMen9l-kLSRHOzpSBMebhKmEzNvH~juJuB3IvqnF~zmub1e5dCap8IAR-Pjcz2jcEPpZSJJ-NA5oA__"}]'
-  recorded_at: Sat, 07 Sep 2024 23:40:19 GMT
+        more at https://www.macmillandictionary.com/dictionary/american/ruby","attributionUrl":"https://www.macmillandictionary.com/dictionary/american/ruby","fileUrl":"https://audio.wordnik.com/11437224.mp3?Expires=1725996409&Key-Pair-Id=APKAIHXX6B6C37D2VKVA&Signature=e7oSlHFTx7hgFpOWQBHN9uBpUsuyCiu5bweYME89Xza5P0DX1RFTEnkbC7AgxM-BOGeLQeZoos-APGfVT9v6cmQdRcOZLctzlAO31WijepZi-s8lVTNieMoqfH8IHC5CiX0oipL5FI7Z~iy82zISnsYaOewsLq9b-wJBosPw8op0q5S0SWozi8nX8oQLovIBGifmAf2s51EAURSHuB~IQQIfJbe0EXV2DYUYiEWSVL3huxD9cwNVsGJI3ZiOxWLIwwMWkCjCoEFcKIdQezs27fF8DUpsnSWytJ3qNo6qhQ0zaTKQ~ZnSSEtoIBItB4mi5u21yuI1ze4bIRbw5PmGDA__"}]'
+  recorded_at: Tue, 10 Sep 2024 19:16:49 GMT
 recorded_with: VCR 6.3.1

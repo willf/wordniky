@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sat, 07 Sep 2024 23:40:15 GMT
+      - Tue, 10 Sep 2024 19:16:46 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -24,28 +24,28 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-hour:
-      - '14953'
+      x-ratelimit-remaining-minute:
+      - '495'
+      x-ratelimit-limit-minute:
+      - '500'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '45'
+      - '14'
       ratelimit-remaining:
       - '495'
       ratelimit-limit:
       - '500'
-      x-ratelimit-limit-minute:
-      - '500'
-      x-ratelimit-remaining-minute:
-      - '495'
+      x-ratelimit-remaining-hour:
+      - '14995'
       cache-control:
       - no-cache
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '4'
+      - '5'
       x-kong-proxy-latency:
-      - '1'
+      - '0'
       via:
       - kong/3.4.1
       content-encoding:
@@ -58,5 +58,5 @@ http_interactions:
         of sulphur"]},{"relationshipType":"etymologically-related-term","words":["corundum"]},{"relationshipType":"form","words":["Colorado
         ruby","balas ruby","rubasse","rubicund","rubied","rubious","rubying"]},{"relationshipType":"hypernym","words":["corundom","corundum","gem","jewel","precious
         stone","red","redness","transparent gem"]},{"relationshipType":"rhyme","words":["Newby","Scooby","booby","looby"]},{"relationshipType":"same-context","words":["amber","azure","diamond","emerald","garnet","golden","ivory","jade","jeweled","opal"]},{"relationshipType":"synonym","words":["Titian","Titian-red","adamant","agate","agate","alexandrite","amethyst","aquamarine","beryl","bloodstone"]},{"relationshipType":"variant","words":["agate"]}]'
-  recorded_at: Sat, 07 Sep 2024 23:40:15 GMT
+  recorded_at: Tue, 10 Sep 2024 19:16:46 GMT
 recorded_with: VCR 6.3.1
