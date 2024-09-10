@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sat, 07 Sep 2024 23:42:56 GMT
+      - Tue, 10 Sep 2024 19:16:45 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -24,20 +24,20 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-minute:
-      - '499'
-      x-ratelimit-limit-minute:
-      - '500'
+      x-ratelimit-remaining-hour:
+      - '14998'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '4'
+      - '15'
       ratelimit-remaining:
-      - '499'
+      - '498'
       ratelimit-limit:
       - '500'
-      x-ratelimit-remaining-hour:
-      - '14951'
+      x-ratelimit-limit-minute:
+      - '500'
+      x-ratelimit-remaining-minute:
+      - '498'
       cache-control:
       - no-cache
       vary:
@@ -47,9 +47,9 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '7'
+      - '5'
       x-kong-proxy-latency:
-      - '1'
+      - '0'
       via:
       - kong/3.4.1
     body:
@@ -64,5 +64,5 @@ http_interactions:
         dark or deep red to deep purplish red.","sequence":"3","score":0,"word":"ruby","attributionUrl":"https://ahdictionary.com/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]},{"id":"R5365500-4","partOfSpeech":"adjective","attributionText":"from
         The American Heritage® Dictionary of the English Language, 5th Edition.","sourceDictionary":"ahd-5","text":"Of
         the color ruby.","sequence":"4","score":0,"word":"ruby","attributionUrl":"https://ahdictionary.com/","wordnikUrl":"https://www.wordnik.com/words/ruby","citations":[],"exampleUses":[],"labels":[],"notes":[],"relatedWords":[],"textProns":[]}]'
-  recorded_at: Sat, 07 Sep 2024 23:42:56 GMT
+  recorded_at: Tue, 10 Sep 2024 19:16:45 GMT
 recorded_with: VCR 6.3.1

@@ -4,16 +4,18 @@ require 'yaml'
 
 module Wordnik
   class Configuration
-    attr_accessor :api_key, :api_url, :api_version, :connection
+    attr_accessor :api_key, :api_host, :api_port, :api_version, :connection
 
     def initialize
       defaults = {
-        api_url: 'https://api.wordnik.com',
+        api_host: 'api.wordnik.com',
+        api_port: 443,
         api_version: 'v4'
       }
       loaded = look_for_config_file
       @api_key = loaded['api_key'] || ENV['WORDNIK_API_KEY']
-      @api_url = loaded['api_url'] || defaults[:api_url]
+      @api_host = loaded['api_host'] || defaults[:api_host]
+      @api_port = loaded['api_port'] || defaults[:api_port]
       @api_version = loaded['api_version'] || defaults[:api_version]
       return unless @api_key.nil?
 
@@ -31,7 +33,7 @@ module Wordnik
     end
 
     def to_s
-      "<Configuration api_key: *****, api_url: #{@api_url}, api_version: #{@api_version}>"
+      "<Configuration api_key: *****, api_host: #{@api_host}:#{@api_port}, api_version: #{@api_version}>"
     end
 
     def inspect

@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sat, 07 Sep 2024 23:40:13 GMT
+      - Tue, 10 Sep 2024 19:16:44 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -24,20 +24,20 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-minute:
-      - '499'
-      x-ratelimit-limit-minute:
-      - '500'
+      x-ratelimit-remaining-hour:
+      - '14999'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '47'
+      - '16'
       ratelimit-remaining:
       - '499'
       ratelimit-limit:
       - '500'
-      x-ratelimit-remaining-hour:
-      - '14968'
+      x-ratelimit-limit-minute:
+      - '500'
+      x-ratelimit-remaining-minute:
+      - '499'
       cache-control:
       - no-cache
       vary:
@@ -49,33 +49,28 @@ http_interactions:
       x-kong-upstream-latency:
       - '4'
       x-kong-proxy-latency:
-      - '0'
+      - '1'
       via:
       - kong/3.4.1
     body:
       encoding: UTF-8
-      string: '{"_id":"66d34cd910816e928365f9f4","word":"palter","publishDate":"2024-09-07T03:00:00.000Z","contentProvider":{"name":"wordnik","id":711},"note":"The
-        word ''palter'' is probably from a German word meaning \"rag, trifle, worthless
-        thing\".","htmlExtra":null,"pdd":"2024-09-07","definitions":[{"text":"To haggle.","partOfSpeech":"verb","source":"gcide","note":null},{"text":"To
-        act in insincere or deceitful manner; to play false; to equivocate; to shift;
-        to dodge; to trifle.","partOfSpeech":"verb","source":"gcide","note":null},{"text":"To
-        babble; to chatter.","partOfSpeech":"verb","source":"gcide","note":null},{"text":"To
-        trifle with; to waste; to squander in paltry ways or on worthless things.","partOfSpeech":"verb","source":"gcide","note":null}],"examples":[{"url":"http://etext.library.adelaide.edu.au/s/scott/walter/talisman/complete.html","text":"“But,”
-        continued the baron anxiously, “what hope that this juggling slave of Saladin
-        will not palter with your Grace?”","title":"The Talisman","id":1090489205},{"url":"http://etext.library.adelaide.edu.au/s/scott/walter/nigel/complete.html","text":"“How,
-        or what do you mean?” said Nigel; “I will break your head, you drunken knave,
-        if you palter with me any longer.”","title":"The Fortunes of Nigel","id":1091224902},{"url":"http://etext.library.adelaide.edu.au/t/trollope/anthony/ayala/complete.html","text":"Do
-        not think that you should palter with the truth either because it may not
-        be palatable to me, or seem decorous to yourself.","title":"Ayala''s Angel","id":997972402},{"url":"http://books.simonandschuster.com/9780743241878","text":"He
-        smoked while the walker extolled his cloths, slipping his head between the
-        rails of ready-mades and his palter inside his patter.","title":"At Swim,
-        Two Boys","id":702392309},{"url":"http://www.gutenberg.org/dirs/etext04/8gata10.txt","text":"Armitage''s
-        time and means were being daily more and more absorbed by the propaganda,
-        to the detriment of his practice; but he was not of those who can palter with
-        their conscience.","title":"A Girl Among the Anarchists","id":1161025323},{"url":"http://www.gutenberg.org/dirs/1/4/6/0/14605/14605-8.txt","text":"He
-        mustn''t palter, or trifle, or shilly-shally about that iron certainty.","title":"The
-        Devil''s Garden","id":1182673353},{"url":"http://etext.lib.virginia.edu/etcbin/toccer-new2?id=BurLady.sgm&images=images%2Fmodeng&data=%2Ftexts%2Fenglish%2Fmodeng%2Fparsed&tag=public&part=all","text":"Lie
-        to her if you can, palter if you know how; try upon her the smallest honest
-        shrewd trick, and see how it fares with you.","title":"A Lady of Quality","id":946712193}]}'
-  recorded_at: Sat, 07 Sep 2024 23:40:13 GMT
+      string: '{"_id":"66d34cd910816e928365f9db","word":"conte","publishDate":"2024-09-10T02:00:00.000Z","contentProvider":{"name":"wordnik","id":711},"note":"‘Conte’
+        comes from the Old French ‘conter,’ to relate, recount.","htmlExtra":null,"pdd":"2024-09-10","definitions":[{"text":"A
+        short narrative or tale, esp. one dealing with surprising or marvelous events.","partOfSpeech":"noun","source":"gcide","note":null}],"examples":[{"url":"http://books.google.com/books?id=T1QqAAAAMAAJ&dq=conte%20medieval%20tale&as_brr=4&pg=PA124#v=onepage&q=conte&f=false","text":"Merimee''s
+        compactness consists rather in reducing to a nouvelle most writers would have
+        made a roman than in focusing on a single situation in a conte.","title":"Charles
+        Sears Baldwin, Essays Out of Hours","id":0},{"url":"http://books.google.com/books?id=m1owAQAAMAAJ&dq=conte%20medieval%20tale&as_brr=4&pg=PA486#v=onepage&q=conte&f=false","text":"The
+        modern short story - as distinguished from the old conte and also from that
+        quite insignificant kind of brief lovetale which flourished in crude American
+        miscellanies before 1850 and came to its height of conspicuous immaturity
+        in T.S. Arthur''s stories - owed its existence to that artistic impulse which
+        had reshaped the novel, not only bringing all its parts into harmony with
+        a central motive but, in every part, working from within outward, for living
+        growth rather than for accretion, substituting expansion and radiant illumination
+        for mere extension.","title":"Harper''s Magazine (1908-1909)","id":0},{"url":"http://news.google.com/newspapers?id=4eZaAAAAIBAJ&sjid=PJIDAAAAIBAJ&dq=conte%20medieval%20tale&pg=6927%2C2582870","text":"The
+        third conte, evocative ode contrasting golden beauty and horror, is an almost
+        wordless sensuous fable about the original Hungarian vampires of the 17th
+        century.","title":"''Four collectors'' items from a Polish master of erotica,''
+        The Age, August 18, 1975","id":0}]}'
+  recorded_at: Tue, 10 Sep 2024 19:16:44 GMT
 recorded_with: VCR 6.3.1

@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sat, 07 Sep 2024 23:40:14 GMT
+      - Tue, 10 Sep 2024 19:16:46 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -25,19 +25,19 @@ http_interactions:
       server:
       - nginx/1.24.0
       x-ratelimit-remaining-hour:
-      - '14954'
+      - '14997'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '46'
+      - '14'
       ratelimit-remaining:
-      - '496'
+      - '497'
       ratelimit-limit:
       - '500'
       x-ratelimit-limit-minute:
       - '500'
       x-ratelimit-remaining-minute:
-      - '496'
+      - '497'
       cache-control:
       - no-cache
       vary:
@@ -47,9 +47,9 @@ http_interactions:
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '6'
+      - '5'
       x-kong-proxy-latency:
-      - '0'
+      - '1'
       via:
       - kong/3.4.1
     body:
@@ -92,5 +92,5 @@ http_interactions:
         Radavsky will be the featured performer, singing songs with the word ruby
         in them.","documentId":12877251,"exampleId":195307394,"title":"The Daily Sentinel:
         News"}]}'
-  recorded_at: Sat, 07 Sep 2024 23:40:14 GMT
+  recorded_at: Tue, 10 Sep 2024 19:16:46 GMT
 recorded_with: VCR 6.3.1
