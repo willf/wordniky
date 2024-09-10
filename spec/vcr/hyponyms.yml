@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sat, 07 Sep 2024 23:40:21 GMT
+      - Tue, 10 Sep 2024 19:16:50 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -25,19 +25,19 @@ http_interactions:
       server:
       - nginx/1.24.0
       x-ratelimit-remaining-minute:
-      - '486'
+      - '489'
       x-ratelimit-limit-minute:
       - '500'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '39'
+      - '10'
       ratelimit-remaining:
-      - '486'
+      - '489'
       ratelimit-limit:
       - '500'
       x-ratelimit-remaining-hour:
-      - '14955'
+      - '14989'
       cache-control:
       - no-cache
       access-control-allow-origin:
@@ -54,5 +54,5 @@ http_interactions:
       encoding: UTF-8
       string: '[{"relationshipType":"hyponym","words":["eutherian","eutherian mammal","female
         mammal","fossorial mammal","metatherian","placental","placental mammal","prototherian","tusker"]}]'
-  recorded_at: Sat, 07 Sep 2024 23:40:21 GMT
+  recorded_at: Tue, 10 Sep 2024 19:16:50 GMT
 recorded_with: VCR 6.3.1

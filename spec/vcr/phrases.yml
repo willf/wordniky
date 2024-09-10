@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sat, 07 Sep 2024 23:40:17 GMT
+      - Tue, 10 Sep 2024 19:16:48 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -24,28 +24,28 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-minute:
-      - '490'
-      x-ratelimit-limit-minute:
-      - '500'
+      x-ratelimit-remaining-hour:
+      - '14993'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '43'
+      - '12'
       ratelimit-remaining:
-      - '490'
+      - '493'
       ratelimit-limit:
       - '500'
-      x-ratelimit-remaining-hour:
-      - '14959'
+      x-ratelimit-limit-minute:
+      - '500'
+      x-ratelimit-remaining-minute:
+      - '493'
       cache-control:
       - no-cache
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '5'
+      - '12'
       x-kong-proxy-latency:
-      - '1'
+      - '0'
       via:
       - kong/3.4.1
       content-encoding:
@@ -53,5 +53,5 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '[{"count":7,"gram1":"ruby","gram2":"red","mi":12.83407129011852,"wlmi":15.641426212176123},{"count":1,"gram1":"know","gram2":"ruby","mi":4.36541070099619,"wlmi":4.36541070099619},{"count":2,"gram1":"the","gram2":"ruby","mi":1.798656547266674,"wlmi":2.798656547266674},{"count":1,"gram1":"is","gram2":"ruby","mi":2.5417556916160144,"wlmi":2.5417556916160144}]'
-  recorded_at: Sat, 07 Sep 2024 23:40:17 GMT
+  recorded_at: Tue, 10 Sep 2024 19:16:48 GMT
 recorded_with: VCR 6.3.1

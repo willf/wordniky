@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Sat, 07 Sep 2024 23:40:20 GMT
+      - Tue, 10 Sep 2024 19:16:50 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -25,27 +25,27 @@ http_interactions:
       server:
       - nginx/1.24.0
       x-ratelimit-remaining-hour:
-      - '14949'
+      - '14988'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '40'
+      - '10'
       ratelimit-remaining:
-      - '491'
+      - '488'
       ratelimit-limit:
       - '500'
       x-ratelimit-limit-minute:
       - '500'
       x-ratelimit-remaining-minute:
-      - '491'
+      - '488'
       cache-control:
       - no-cache
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '6'
+      - '4'
       x-kong-proxy-latency:
-      - '0'
+      - '1'
       via:
       - kong/3.4.1
       content-encoding:
@@ -54,5 +54,5 @@ http_interactions:
       encoding: UTF-8
       string: '[{"relationshipType":"hypernym","words":["blighter","bloke","catch","chap","cuss","disagreeable
         woman","fella","feller","fellow","gent"]}]'
-  recorded_at: Sat, 07 Sep 2024 23:40:20 GMT
+  recorded_at: Tue, 10 Sep 2024 19:16:50 GMT
 recorded_with: VCR 6.3.1

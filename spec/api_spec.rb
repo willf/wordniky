@@ -3,20 +3,23 @@
 require_relative '../lib/wordnik'
 require 'vcr'
 require 'rspec'
+require 'faraday'
 
 RSpec.configure do |config|
   # some (optional) config here
 end
 
-client = Wordnik::Client.new
+configuration = Wordnik::Configuration.new
 
 VCR.configure do |config|
   config.cassette_library_dir = 'spec/vcr'
-  config.hook_into :faraday # or :fakeweb
+  config.hook_into :faraday
   config.filter_sensitive_data('API_KEY') do |_interaction|
-    client.configuration.api_key
+    configuration.api_key
   end
 end
+
+client = Wordnik::Client.new(http_client: Faraday.new('https://api.wordnik.com'))
 
 describe Wordnik::Client do
   it 'should have a configuration' do
