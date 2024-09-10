@@ -16,8 +16,9 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = 'Wordnik'
 
-  s.add_dependency 'faraday'
+  s.add_dependency 'json'
 
+  s.add_development_dependency 'faraday'
   s.add_development_dependency 'pry'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rspec'
