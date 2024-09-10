@@ -39,6 +39,15 @@ end
 
 ## Notes
 
+This gem uses net/http to make requests to the Wordnik API. If you want to use a different
+HTTP library, you can supply a different `http_client` to the Wordnik::Client constructor.
+For example:
+
+```ruby
+require 'faraday'
+client = Wordnik::Client.new(http_client: Faraday.new('https://api.wordnik.com'))
+```
+
 The original Wordnik gem was written in 2011; the last significant update was in 2013.
 As a result, the original gem does not work well with the current Wordnik API.
 
