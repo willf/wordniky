@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.wordnik.com/v4/word.json/suffering/relatedWords?api_key=API_KEY&limitPerRelationshipType=10&relationshipTypes=rhyme
+    uri: https://api.wordnik.com/v4/word.json/ruby/relatedWords?api_key=API_KEY&limitPerRelationshipType=10&relationshipTypes=rhyme
     body:
       encoding: US-ASCII
       string: ''
@@ -15,7 +15,7 @@ http_interactions:
       message: OK
     headers:
       date:
-      - Tue, 10 Sep 2024 19:16:49 GMT
+      - Thu, 03 Oct 2024 02:27:03 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -24,26 +24,26 @@ http_interactions:
       - keep-alive
       server:
       - nginx/1.24.0
-      x-ratelimit-remaining-hour:
-      - '14990'
       x-ratelimit-limit-hour:
       - '15000'
       ratelimit-reset:
-      - '11'
+      - '57'
       ratelimit-remaining:
-      - '490'
+      - '499'
       ratelimit-limit:
       - '500'
+      x-ratelimit-remaining-hour:
+      - '14993'
+      x-ratelimit-remaining-minute:
+      - '499'
       x-ratelimit-limit-minute:
       - '500'
-      x-ratelimit-remaining-minute:
-      - '490'
       cache-control:
       - no-cache
       access-control-allow-origin:
       - "*"
       x-kong-upstream-latency:
-      - '4'
+      - '6'
       x-kong-proxy-latency:
       - '1'
       via:
@@ -52,6 +52,6 @@ http_interactions:
       - gzip
     body:
       encoding: UTF-8
-      string: '[{"relationshipType":"rhyme","words":["buffering"]}]'
-  recorded_at: Tue, 10 Sep 2024 19:16:49 GMT
+      string: '[{"relationshipType":"rhyme","words":["Newby","Scooby","booby","looby"]}]'
+  recorded_at: Thu, 03 Oct 2024 02:27:03 GMT
 recorded_with: VCR 6.3.1

@@ -20,6 +20,7 @@ VCR.configure do |config|
 end
 
 client = Wordnik::Client.new(http_client: Faraday.new('https://api.wordnik.com'))
+dirty_client = Wordnik::Client.new(http_client: Faraday.new('https://api.wordnik.com'), clean_up: false)
 
 describe Wordnik::Client do
   it 'should have a configuration' do
@@ -117,7 +118,22 @@ describe Wordnik::Client do
 
   it 'should be able to get frequency' do
     VCR.use_cassette('frequency') do
-      expect(client.frequency('ruby')).to be_a Hash
+      freqs = client.frequency('ruby')
+      expect(freqs).to be_an Array
+      expect(freqs.first).to be_a Hash
+      expect(freqs.first[:year]).to be_an Integer
+      expect(freqs.first[:count]).to be_an Integer
+    end
+  end
+
+  it 'should be able to get non-cleanuped data for frequency' do
+    VCR.use_cassette('frequency_dirty') do
+      freqs = dirty_client.frequency('ruby')
+      expect(freqs).to be_an Hash
+      freqs = freqs[:frequency]
+      expect(freqs.first).to be_a Hash
+      expect(freqs.first[:year]).to be_an String
+      expect(freqs.first[:count]).to be_an Integer
     end
   end
 

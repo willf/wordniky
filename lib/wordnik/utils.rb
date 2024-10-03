@@ -1,12 +1,11 @@
 # frozen_string_literal: true
 
-# deep transform keys of a hash to symbols in snake case
 require 'time'
 
 module Wordnik
   module_function
 
-  def to_timestamp_safely(thing)
+  def to_timestamp_or_string(thing)
     if thing.is_a?(String)
       if thing.match(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(:?\.\d{2,4})?Z$/)
         return Time.parse(thing)
@@ -52,7 +51,7 @@ module Wordnik
     if thing.is_a?(Array)
       return thing.map { |v| to_snake_case(v) }
     elsif thing.is_a?(String)
-      return to_timestamp_safely(thing)
+      return to_timestamp_or_string(thing)
     elsif !thing.is_a?(Hash)
       return thing
     end
@@ -65,7 +64,7 @@ module Wordnik
       elsif value.is_a?(Array)
         value = value.map { |v| to_snake_case(v) }
       end
-      value = to_timestamp_safely(value)
+      value = to_timestamp_or_string(value)
       result[to_underscore(key).to_sym] = value
     end
     result

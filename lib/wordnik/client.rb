@@ -7,7 +7,7 @@ module Wordnik
   class Error < StandardError; end
 
   class Client
-    attr_accessor :configuration
+    attr_accessor :configuration, :clean_up
 
     # Initializes a new Wordnik::Client object.
     # @param configuration [Wordnik::Configuration] the configuration to use.
@@ -116,8 +116,15 @@ module Wordnik
 
       if @clean_up && is_404?(results)
         []
-      elsif @clean_up && is_404?(results)
-        results[:frequency]
+      elsif @clean_up && !is_404?(results)
+        frequencies = results[:frequency]
+        # convert the years to integers
+        # and convert the counts to integers
+        frequencies.each do |f|
+          f[:year] = f[:year].to_i
+          f[:count] = f[:count].to_i
+        end
+        frequencies
       else
         results
       end
@@ -314,8 +321,8 @@ module Wordnik
     # @param limit [Integer] the maximum number of results to return. Default is 10.
     # @return [Array] Array of antonyms.
     # @raise [Wordnik::Error] if some error is returned by the API.
-    def rhymes(_word, limit: 10)
-      related_words('suffering', relationship_types: :rhyme, limit_per_relationship_type: limit).map do |r|
+    def rhymes(word, limit: 10)
+      related_words(word, relationship_types: :rhyme, limit_per_relationship_type: limit).map do |r|
         r[:words]
       end.flatten
     end
