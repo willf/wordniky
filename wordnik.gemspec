@@ -5,7 +5,7 @@ module Wordnik
 end
 
 Gem::Specification.new do |s|
-  s.name        = 'Wordniknik'
+  s.name        = 'Wordniky'
   s.version     = Wordnik::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['Will Fitzgerald']
@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.summary     = 'A ruby wrapper for the Wordnik API'
   s.description = 'This gem provides a simple interface to the Wordnik API.'
 
-  s.rubyforge_project = 'Wordniknik'
+  s.rubyforge_project = 'Wordniky'
 
   s.add_dependency 'json'
 
@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
   s.files         = Dir.glob('lib/**/*')
   s.require_paths = ['lib']
   s.test_files    = Dir.glob('spec/**/*')
-  s.metadata      = { 'source_code_uri' => 'https://github.com/willf/wordniknik' }
+  s.metadata      = { 'source_code_uri' => 'https://github.com/willf/wordniky' }
 
   s.required_ruby_version = '>= 3.0.0'
 end
