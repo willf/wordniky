@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ['Will Fitzgerald']
   s.email       = ['willf@noreply.github.com']
-  s.homepage    = 'https://github.com/willf/wordniknik'
+  s.homepage    = 'https://github.com/willf/wordniky'
   s.summary     = 'A ruby wrapper for the Wordnik API'
   s.description = 'This gem provides a simple interface to the Wordnik API.'
 
